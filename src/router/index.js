@@ -5,7 +5,7 @@ import MemberDetailPage from '../views/MemberDetailPage.vue'
 import ProjectDetailPage from '../views/ProjectDetailPage.vue'
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: '/',
