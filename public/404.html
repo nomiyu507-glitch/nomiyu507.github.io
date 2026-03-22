@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Redirecting...</title>
+    <script>
+      var path = location.pathname;
+      sessionStorage.redirect = path + location.search + location.hash;
+      var segments = path.split('/').filter(Boolean);
+      segments.pop();
+      var base = segments.length ? '/' + segments.join('/') + '/' : '/';
+      location.replace(location.origin + base);
+    </script>
+  </head>
+  <body>Redirecting...</body>
+</html>
