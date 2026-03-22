@@ -34,7 +34,7 @@ export const students = [
     nameKo: '유신녹｜박사',
     email: 'yuxinnuomay@gmail.com',
     interests: 'HCI / Creative Computing / data visualization',
-    avatar: '/avatars/yuxinnuo.jpg',
+    avatar: './avatars/yuxinnuo.jpg',
     bio: '',
     role: 'Ph.D.',
     education: [
@@ -58,7 +58,7 @@ export const students = [
     nameKo: '손소호｜석박통학',
     email: 'xh2024162898@hanyang.ac.kr',
     interests: 'Game Design / Interactive Storytelling / 3D Animation',
-    avatar: '/avatars/sunxiaohu.jpg',
+    avatar: './avatars/sunxiaohu.jpg',
     bio: 'Researcher in HCI, creative computing and data visualization. Focus on algorithm education applications and AI-based systems for emotional development.',
     role: 'M.S.–Ph.D. Candidate',
     education: [
@@ -78,7 +78,7 @@ export const students = [
     nameKo: '왕문호｜석박통학',
     email: 'w1293968742@gmail.com',
     interests: '3D Animation / AIGC',
-    avatar: '/avatars/wangwenhao.jpg',
+    avatar: './avatars/wangwenhao.jpg',
     bio: 'Researcher in HCI, creative computing and data visualization. Focus on algorithm education applications and AI-based systems for emotional development.',
     role: 'Ph.D. Candidate',
     education: [
