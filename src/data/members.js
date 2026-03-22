@@ -78,7 +78,7 @@ export const students = [
     nameKo: '왕문호｜석박통학',
     email: 'w1293968742@gmail.com',
     interests: '3D Animation / AIGC',
-    avatar: '',
+    avatar: '/avatars/wangwenhao.jpg',
     bio: 'Researcher in HCI, creative computing and data visualization. Focus on algorithm education applications and AI-based systems for emotional development.',
     role: 'Ph.D. Candidate',
     education: [
