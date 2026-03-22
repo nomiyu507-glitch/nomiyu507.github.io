@@ -21,9 +21,9 @@ export const professor = {
     { date: '2023.12', title: 'Publication', desc: "Empowering autistic children's emotional development through AI-based Image Generation System' (2023) Frontiers in Art Research." }
   ],
   projects: [
-    { id: 'professor-proj1', title: 'Project 1' },
-    { id: 'professor-proj2', title: 'Project 2' },
-    { id: 'professor-proj3', title: 'Project 3' }
+    { id: 'professor-proj1', title: 'Project 1', link: '', image: '' },
+    { id: 'professor-proj2', title: 'Project 2', link: '', image: '' },
+    { id: 'professor-proj3', title: 'Project 3', link: '', image: '' }
   ]
 }
 
@@ -33,7 +33,7 @@ export const students = [
     nameEn: 'YU XINNUO',
     nameKo: '유신녹｜박사',
     email: 'yuxinnuomay@gmail.com',
-    interests: 'HCI / Creative Computing / data visualization',
+    interests: 'HCI / Creative Computing / Data visualization',
     avatar: './avatars/yuxinnuo.jpg',
     bio: '',
     role: 'Ph.D.',
@@ -47,9 +47,9 @@ export const students = [
       { date: '2023.12', title: 'Publication |', desc: "Empowering autistic children's emotional development through AI-based Image Generation System' (2023) Frontiers in Art Research." }
     ],
     projects: [
-      { id: 'yu-xinnuo-proj1', title: 'Project 1' },
-      { id: 'yu-xinnuo-proj2', title: 'Project 2' },
-      { id: 'yu-xinnuo-proj3', title: 'Project 3' }
+      { id: 'yu-xinnuo-proj1', title: 'I.E.E', link: 'https://youtu.be/oiiYXG3IT6o?si=8LsFCHj9wu3seUcF', image: './avatars/yxn1.png' },
+      { id: 'yu-xinnuo-proj2', title: 'EMOGym', link: 'https://youtu.be/rcXQpqeEiEU?si=Q69ldF2Yz03m4kY4', image: './avatars/yxn2.png' },
+      { id: 'yu-xinnuo-proj3', title: 'Information juice machine', link: 'https://youtu.be/RR7CgKYgqWY?si=NJLEopKraGCzqq0y', image: './avatars/yxn3.png' }
     ]
   },
   {
@@ -67,9 +67,9 @@ export const students = [
     ],
     researchWork: [],
     projects: [
-      { id: 'sun-xiaohu-proj1', title: 'Project 1' },
-      { id: 'sun-xiaohu-proj2', title: 'Project 2' },
-      { id: 'sun-xiaohu-proj3', title: 'Project 3' }
+      { id: 'sun-xiaohu-proj1', title: 'Project 1', link: '', image: '' },
+      { id: 'sun-xiaohu-proj2', title: 'Project 2', link: '', image: '' },
+      { id: 'sun-xiaohu-proj3', title: 'Project 3', link: '', image: '' }
     ]
   },
   {
@@ -91,9 +91,9 @@ export const students = [
       { date: '2025.12', title: 'Publication |', desc: "왕문호, 노승관.(2025).매체 생태학 관점에서 생성형 AI의 3D 애니메이션에 대한 구조적 재구성 분석.한국디자인문화학회지,31(4),505-519." }
     ],
     projects: [
-      { id: 'wang-wenhao-proj1', title: 'Project 1' },
-      { id: 'wang-wenhao-proj2', title: 'Project 2' },
-      { id: 'wang-wenhao-proj3', title: 'Project 3' }
+      { id: 'wang-wenhao-proj1', title: 'Project 1', link: '', image: '' },
+      { id: 'wang-wenhao-proj2', title: 'Project 2', link: '', image: '' },
+      { id: 'wang-wenhao-proj3', title: 'Project 3', link: '', image: '' }
     ]
   },
   {
@@ -114,9 +114,9 @@ export const students = [
       { date: '2026. 05', title: 'Publication |', desc: "" }
     ],
     projects: [
-      { id: 'li-siying-proj1', title: 'Project 1' },
-      { id: 'li-siying-proj2', title: 'Project 2' },
-      { id: 'li-siying-proj3', title: 'Project 3' }
+      { id: 'li-siying-proj1', title: 'Project 1', link: '', image: '' },
+      { id: 'li-siying-proj2', title: 'Project 2', link: '', image: '' },
+      { id: 'li-siying-proj3', title: 'Project 3', link: '', image: '' }
     ]
   },
   {
@@ -125,7 +125,7 @@ export const students = [
     nameKo: '박위롱｜석사',
     email: 'f1013014336@gmail.com',
     interests: '영화의 캐릭터 형성 및 서사 전략 연구',
-    avatar: '',
+    avatar: './avatars/yulong.jpg',
     bio: 'Researcher in HCI, creative computing and data visualization. Focus on algorithm education applications and AI-based systems for emotional development.',
     role: 'M.S.',
     education: [
@@ -136,9 +136,9 @@ export const students = [
       { date: '2025. 06', title: 'Publication |', desc: 'A Comparative Study on the Cinematic Adaptation Strategies of "Flawed" Traditional Mythological Characters Taking the Film Series Thor, Ne Zha, and Hercules (2014) as Examples' },
     ],
     projects: [
-      { id: 'fu-yulong-proj1', title: 'Project 1' },
-      { id: 'fu-yulong-proj2', title: 'Project 2' },
-      { id: 'fu-yulong-proj3', title: 'Project 3' }
+      { id: 'fu-yulong-proj1', title: 'I.E.E', link: 'https://youtu.be/oiiYXG3IT6o?si=8LsFCHj9wu3seUcF', image: '' },
+      { id: 'fu-yulong-proj2', title: 'EMOGym', link: 'https://youtu.be/rcXQpqeEiEU?si=Q69ldF2Yz03m4kY4', image: '' },
+      { id: 'fu-yulong-proj3', title: 'Information juice machine', link: 'https://youtu.be/RR7CgKYgqWY?si=NJLEopKraGCzqq0y', image: '' }
     ]
   },
   {
@@ -159,9 +159,9 @@ export const students = [
 
     ],
     projects: [
-      { id: 'zhan-shunian-proj1', title: 'Project 1' },
-      { id: 'zhan-shunian-proj2', title: 'Project 2' },
-      { id: 'zhan-shunian-proj3', title: 'Project 3' }
+      { id: 'zhan-shunian-proj1', title: 'Project 1', link: '', image: '' },
+      { id: 'zhan-shunian-proj2', title: 'Project 2', link: '', image: '' },
+      { id: 'zhan-shunian-proj3', title: 'Project 3', link: '', image: '' }
     ]
   },
   {
@@ -170,7 +170,7 @@ export const students = [
     nameKo: '이근동｜박사',
     email: 'lijintong@hanyang.ac.kr',
     interests: '애니메이션 디자인, 게임 디자인, AI 생성 애니메이션',
-    avatar: '',
+    avatar: './avatars/lijintong.jpg',
     bio: 'Researcher in HCI, creative computing and data visualization. Focus on algorithm education applications and AI-based systems for emotional development.',
     role: 'Ph.D.',
     education: [
@@ -182,9 +182,9 @@ export const students = [
       { date: '2024.06', title: 'Publication', desc: " An Analysis of the Ideographic Function of Color Language in 2D Animation: A Case Study of The Pool" }
     ],
     projects: [
-      { id: 'li-jintong-proj1', title: 'Project 1' },
-      { id: 'li-jintong-proj2', title: 'Project 2' },
-      { id: 'li-jintong-proj3', title: 'Project 3' }
+      { id: 'li-jintong-proj1', title: 'THE DESERT SECRET', link: 'https://www.dropbox.com/scl/fi/8levs40n49eysmk1iqg12/THE-DESERT-SECRET.mp4?rlkey=fp16s5ogdvp3c3yf6wcs83igk&st=1m0gnymh&dl=0', image: './avatars/ljt1.png' },
+      { id: 'li-jintong-proj2', title: 'THE SEA', link: 'https://www.dropbox.com/scl/fi/7t7t3qt5p1et3uuxgkuen/THE-SEA.mp4?rlkey=0o7no2ihcp9unajv0k12zywr6&st=21uf5548&dl=0', image: './avatars/ljt2.png' },
+      { id: 'li-jintong-proj3', title: 'JEEP', link: 'https://www.dropbox.com/scl/fi/g17diyqo9v1byedir9u31/JEEP.mp4?rlkey=z576azw3ww60obbray8cq6vvu&st=s8u081rb&dl=0', image: './avatars/ljt3.png' }
     ]
   },
   {
@@ -205,9 +205,9 @@ export const students = [
       { date: '2022.06', title: 'undergraduate graduation project', desc: 'Undergraduate graduation project was awarded the Best Creative Award by the faculty.' }
     ],
     projects: [
-      { id: 'ji-wanting-proj1', title: 'Project 1' },
-      { id: 'ji-wanting-proj2', title: 'Project 2' },
-      { id: 'ji-wanting-proj3', title: 'Project 3' }
+      { id: 'ji-wanting-proj1', title: 'Project 1', link: '', image: '' },
+      { id: 'ji-wanting-proj2', title: 'Project 2', link: '', image: '' },
+      { id: 'ji-wanting-proj3', title: 'Project 3', link: '', image: '' }
     ]
   }
 ]
@@ -247,3 +247,12 @@ export function getMemberById(id) {
 
 /** 所有成员列表（用于路由验证） */
 export const allMembers = [professor, ...students, ...graduatedStudents]
+
+/** 根据 id 获取项目（从所有成员的 projects 中查找） */
+export function getProjectById(id) {
+  for (const member of allMembers) {
+    const proj = member.projects?.find(p => p.id === id)
+    if (proj) return proj
+  }
+  return null
+}

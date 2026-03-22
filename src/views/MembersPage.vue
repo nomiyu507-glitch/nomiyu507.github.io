@@ -16,7 +16,7 @@
     </section>
 
     <section class="member-section">
-      <h2 class="section-title">Student</h2>
+      <h2 class="section-title">Research Students</h2>
       <div class="member-cards student-cards">
         <MemberCard
           v-for="student in students"

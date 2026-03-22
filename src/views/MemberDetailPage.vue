@@ -42,15 +42,35 @@
       <h2 class="section-title">Project:</h2>
       <div class="project-blocks">
         <template v-for="(proj, i) in displayProjects" :key="i">
+          <a
+            v-if="proj.title && proj.link"
+            :href="proj.link"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="project-block"
+          >
+            <div class="project-img-wrap">
+              <img v-if="proj.image" :src="proj.image" :alt="proj.title" class="project-img" />
+              <div v-else class="project-img-placeholder"></div>
+            </div>
+            <span class="project-title">{{ proj.title }}</span>
+          </a>
           <router-link
-            v-if="proj.title"
+            v-else-if="proj.title"
             :to="{ name: 'project', params: { id: proj.id }, query: { from: member.id } }"
             class="project-block"
           >
-            {{ proj.title }}
+            <div class="project-img-wrap">
+              <img v-if="proj.image" :src="proj.image" :alt="proj.title" class="project-img" />
+              <div v-else class="project-img-placeholder"></div>
+            </div>
+            <span class="project-title">{{ proj.title }}</span>
           </router-link>
           <div v-else class="project-block project-placeholder-block">
-            待补充
+            <div class="project-img-wrap">
+              <div class="project-img-placeholder"></div>
+            </div>
+            <span class="project-title">待补充</span>
           </div>
         </template>
       </div>
@@ -236,33 +256,56 @@ const displayProjects = computed(() => {
 }
 
 .project-block {
-  aspect-ratio: 4/3;
-  background: #e5e7eb;
-  border-radius: 12px;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
   text-decoration: none;
   color: #4b5563;
   font-size: 0.875rem;
   font-weight: 500;
-  transition: background 0.2s, color 0.2s;
+  transition: color 0.2s;
 }
 
-.project-block:hover {
-  background: #d1d5db;
+.project-img-wrap {
+  aspect-ratio: 4/3;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #e5e7eb;
+  margin-bottom: 12px;
+  transition: opacity 0.2s;
+}
+
+.project-block .project-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.project-img-placeholder {
+  width: 100%;
+  height: 100%;
+  background: #e5e7eb;
+}
+
+.project-block .project-title {
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.project-block:not(.project-placeholder-block):hover {
   color: #1f2937;
+}
+
+.project-block:not(.project-placeholder-block):hover .project-img-wrap {
+  opacity: 0.95;
 }
 
 .project-placeholder-block {
   cursor: default;
   color: #9ca3af;
   pointer-events: none;
-}
-
-.project-placeholder-block:hover {
-  background: #e5e7eb;
-  color: #9ca3af;
 }
 
 .not-found {
