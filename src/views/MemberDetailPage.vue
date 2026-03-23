@@ -17,6 +17,11 @@
       </div>
     </div>
 
+    <!-- Personal Website -->
+    <div v-if="member.website" class="website-section">
+      <a :href="member.website" target="_blank" rel="noopener noreferrer" class="website-link">Personal website</a>
+    </div>
+
     <!-- Education Background -->
     <section v-if="member.education?.length" class="section">
       <h2 class="section-title">Education Background:</h2>
@@ -38,7 +43,7 @@
     </section>
 
     <!-- Project: 三个方块，点击链接到项目 -->
-    <section class="section">
+    <section v-if="(member.projects?.length || 0) > 0" class="section">
       <h2 class="section-title">Project:</h2>
       <div class="project-blocks">
         <template v-for="(proj, i) in displayProjects" :key="i">
@@ -190,6 +195,34 @@ const displayProjects = computed(() => {
 }
 
 .header-email a:hover {
+  color: #2563eb;
+  text-decoration: underline;
+}
+
+.email {
+  display: block;
+  font-size: 0.9375rem;
+  color: #4b5563;
+  text-decoration: none;
+  margin-top: 6px;
+}
+
+.email:hover {
+  color: #2563eb;
+  text-decoration: underline;
+}
+
+.website-section {
+  margin-bottom: 32px;
+}
+
+.website-link {
+  font-size: 0.9375rem;
+  color: #1f2937;
+  text-decoration: none;
+}
+
+.website-link:hover {
   color: #2563eb;
   text-decoration: underline;
 }

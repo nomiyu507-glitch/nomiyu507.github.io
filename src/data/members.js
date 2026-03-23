@@ -7,6 +7,7 @@ export const professor = {
   nameEn: 'Professor Name',
   nameKo: '교수님',
   email: 'professor@lab.edu',
+  website: '',
   interests: 'Research area / topics',
   avatar: '',
   bio: '',
@@ -33,6 +34,7 @@ export const students = [
     nameEn: 'YU XINNUO',
     nameKo: '유신녹｜박사',
     email: 'yuxinnuomay@gmail.com',
+    website: '',
     interests: 'HCI / Creative Computing / Data visualization',
     avatar: './avatars/yuxinnuo.jpg',
     bio: '',
@@ -57,6 +59,7 @@ export const students = [
     nameEn: 'SUN XIAOHU',
     nameKo: '손소호｜석박통학',
     email: 'xh2024162898@hanyang.ac.kr',
+    website: '',
     interests: 'Game Design / Interactive Storytelling / 3D Animation',
     avatar: './avatars/sunxiaohu.jpg',
     bio: 'Researcher in HCI, creative computing and data visualization. Focus on algorithm education applications and AI-based systems for emotional development.',
@@ -77,6 +80,7 @@ export const students = [
     nameEn: 'WANG WENHAO',
     nameKo: '왕문호｜석박통학',
     email: 'w1293968742@gmail.com',
+    website: '',
     interests: '3D Animation / AIGC',
     avatar: './avatars/wangwenhao.jpg',
     bio: 'Researcher in HCI, creative computing and data visualization. Focus on algorithm education applications and AI-based systems for emotional development.',
@@ -101,8 +105,9 @@ export const students = [
     nameEn: 'LI SIYING',
     nameKo: '이사영｜석사',
     email: 'siyingli999@gmail.com',
+    website: '',
     interests: 'AI 영상 미학, 애니메이션 디자인',
-    avatar: '',
+    avatar: './avatars/lisiying.jpg',
     bio: 'Researcher in HCI, creative computing and data visualization. Focus on algorithm education applications and AI-based systems for emotional development.',
     role: 'M.S.',
     education: [
@@ -114,9 +119,9 @@ export const students = [
       { date: '2026. 05', title: 'Publication |', desc: "" }
     ],
     projects: [
-      { id: 'li-siying-proj1', title: 'Project 1', link: '', image: '' },
-      { id: 'li-siying-proj2', title: 'Project 2', link: '', image: '' },
-      { id: 'li-siying-proj3', title: 'Project 3', link: '', image: '' }
+      { id: 'li-siying-proj1', title: 'Project 1', link: 'https://drive.google.com/drive/folders/1MTtotHABO_bpxcLwSG2Rjq2kHSUQ-FKW?usp=drive_link', image: '' },
+      { id: 'li-siying-proj2', title: 'Project 2', link: 'https://drive.google.com/drive/folders/1y-NFKIWTBiAkf2-y3FiQm3YxOSpUzvxw?usp=drive_link', image: '' },
+      { id: 'li-siying-proj3', title: 'Project 3', link: 'https://drive.google.com/drive/folders/1y-NFKIWTBiAkf2-y3FiQm3YxOSpUzvxw?usp=drive_link', image: '' }
     ]
   },
   {
@@ -124,6 +129,7 @@ export const students = [
     nameEn: 'FU YULONG',
     nameKo: '박위롱｜석사',
     email: 'f1013014336@gmail.com',
+    website: '',
     interests: '영화의 캐릭터 형성 및 서사 전략 연구',
     avatar: './avatars/yulong.jpg',
     bio: 'Researcher in HCI, creative computing and data visualization. Focus on algorithm education applications and AI-based systems for emotional development.',
@@ -146,8 +152,9 @@ export const students = [
     nameEn: 'ZHAN SHUNIAN',
     nameKo: '잔수연｜석박통학',
     email: 'shunianzhan@gmail.com',
+    website: '',
     interests: 'AI생성, 애니메이션의 캐릭터 디자인',
-    avatar: '',
+    avatar: './avatars/zhanshunian.jpg',
     bio: 'Researcher in HCI, creative computing and data visualization. Focus on algorithm education applications and AI-based systems for emotional development.',
     role: 'Ph.D. Candidate',
     education: [
@@ -159,7 +166,7 @@ export const students = [
 
     ],
     projects: [
-      { id: 'zhan-shunian-proj1', title: 'Project 1', link: '', image: '' },
+      { id: 'zhan-shunian-proj1', title: 'Portfolio', link: 'https://youtu.be/g8jr3g3AJDA?feature=shared', image: './avatars/zsn1.png' },
       { id: 'zhan-shunian-proj2', title: 'Project 2', link: '', image: '' },
       { id: 'zhan-shunian-proj3', title: 'Project 3', link: '', image: '' }
     ]
@@ -169,6 +176,7 @@ export const students = [
     nameEn: 'LI JINTONG',
     nameKo: '이근동｜박사',
     email: 'lijintong@hanyang.ac.kr',
+    website: '',
     interests: '애니메이션 디자인, 게임 디자인, AI 생성 애니메이션',
     avatar: './avatars/lijintong.jpg',
     bio: 'Researcher in HCI, creative computing and data visualization. Focus on algorithm education applications and AI-based systems for emotional development.',
@@ -192,6 +200,7 @@ export const students = [
     nameEn: 'JI WANTING',
     nameKo: '지완정｜석사',
     email: '',
+    website: '',
     interests: 'HCI / Animation Design / 3D Modeling',
     avatar: '',
     bio: 'Researcher in HCI, creative computing and data visualization. Focus on algorithm education applications and AI-based systems for emotional development.',
@@ -209,6 +218,31 @@ export const students = [
       { id: 'ji-wanting-proj2', title: 'Project 2', link: '', image: '' },
       { id: 'ji-wanting-proj3', title: 'Project 3', link: '', image: '' }
     ]
+  },
+  {
+    id: 'zhang-taibao',
+    nameEn: 'ZHANG TAIBAO',
+    nameKo: '장태보｜석박통합',
+    email: 'ztb0421@gmail.com',
+    website: 'https://ztb0421.wixsite.com/my-site',
+    interests: 'Emotional Design / Game Experience / Generative AI',
+    avatar: './avatars/zhangtaibao.jpg',
+    bio: '',
+    role: 'M.S.–Ph.D. Candidate',
+    education: [
+      { period: '2020-2022', school: 'Kongju National University', degree: 'Bachelor of Design' },
+      { period: '2022-2026', school: 'Hanyang University', degree: '' }
+    ],
+    researchWork: [
+      { date: '2024', title: 'A Study on the WTIF Model Based on the Without Thought Theory: Focusing on Black Myth: Wukong.', desc: '' },
+      { date: '2025', title: 'A Theoretical and Empirical Analysis of Emotional Experience Design in Digital Games Based on the HAIM Model.', desc: '' },
+      { date: '2025', title: 'Analysis of the Use of AI Generated Content (AIGC) in Game Narrative Design.', desc: '' }
+    ],
+    // projects: [
+    //   { id: 'zhang-taibao-proj1', title: 'Project 1', link: '', image: '' },
+    //   { id: 'zhang-taibao-proj2', title: 'Project 2', link: '', image: '' },
+    //   { id: 'zhang-taibao-proj3', title: 'Project 3', link: '', image: '' }
+    // ]
   }
 ]
 
@@ -219,6 +253,7 @@ export const graduatedStudents = [
     nameEn: 'ZHANG QIUSHENG',
     nameKo: '장추승｜박사',
     email: 'laoooozx@gmail.com',
+    website: '',
     interests: 'Generative AI / AI-assisted creative design / Artificial Intelligence Design',
     avatar: '',
     bio: '',

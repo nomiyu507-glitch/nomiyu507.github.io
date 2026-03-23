@@ -19,7 +19,7 @@
       <h2 class="section-title">Research Students</h2>
       <div class="member-cards student-cards">
         <MemberCard
-          v-for="student in students"
+          v-for="student in sortedStudents"
           :key="student.id"
           :name-en="student.nameEn"
           :name-ko="student.nameKo"
@@ -50,8 +50,19 @@
 </template>
 
 <script setup>
+import { computed } from 'vue'
 import MemberCard from '../components/MemberCard.vue'
 import { professor, students, graduatedStudents } from '../data/members.js'
+
+// 博士、硕博连读在前，硕士在后
+const sortedStudents = computed(() => {
+  const isPhdOrCombined = s => s.role?.includes('Ph.D')
+  return [...students].sort((a, b) => {
+    const aFirst = isPhdOrCombined(a) ? 0 : 1
+    const bFirst = isPhdOrCombined(b) ? 0 : 1
+    return aFirst - bFirst
+  })
+})
 </script>
 
 <style scoped>
