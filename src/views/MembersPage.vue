@@ -1,7 +1,7 @@
 <template>
   <div class="members-page">
     <section class="member-section">
-      <h2 class="section-title">Professor</h2>
+      <h2 class="section-title">{{ t('members.professor') }}</h2>
       <div class="member-cards professor-cards">
         <MemberCard
           :name-en="professor.nameEn"
@@ -16,7 +16,7 @@
     </section>
 
     <section class="member-section">
-      <h2 class="section-title">Research Students</h2>
+      <h2 class="section-title">{{ t('members.researchStudents') }}</h2>
       <div class="member-cards student-cards">
         <MemberCard
           v-for="student in sortedStudents"
@@ -32,7 +32,7 @@
     </section>
 
     <section class="member-section">
-      <h2 class="section-title">Graduated Students</h2>
+      <h2 class="section-title">{{ t('members.graduatedStudents') }}</h2>
       <div class="member-cards student-cards">
         <MemberCard
           v-for="grad in graduatedStudents"
@@ -51,8 +51,11 @@
 
 <script setup>
 import { computed } from 'vue'
+import { useI18n } from 'vue-i18n'
 import MemberCard from '../components/MemberCard.vue'
 import { professor, students, graduatedStudents } from '../data/members.js'
+
+const { t } = useI18n()
 
 // 博士、硕博连读在前，硕士在后
 const sortedStudents = computed(() => {

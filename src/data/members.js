@@ -2,6 +2,19 @@
  * 实验室成员数据 - 成员页与个人详情页共用
  */
 
+/** 每周时间表：mon–sun 为当日可用时间，空字符串表示未填写 */
+function emptySchedule() {
+  return {
+    mon: '',
+    tue: '',
+    wed: '',
+    thu: '',
+    fri: '',
+    sat: '',
+    sun: ''
+  }
+}
+
 export const professor = {
   id: 'professor',
   nameEn: 'Professor Name',
@@ -25,7 +38,8 @@ export const professor = {
     { id: 'professor-proj1', title: 'Project 1', link: '', image: '' },
     { id: 'professor-proj2', title: 'Project 2', link: '', image: '' },
     { id: 'professor-proj3', title: 'Project 3', link: '', image: '' }
-  ]
+  ],
+  schedule: emptySchedule()
 }
 
 export const students = [
@@ -52,7 +66,16 @@ export const students = [
       { id: 'yu-xinnuo-proj1', title: 'I.E.E', link: 'https://youtu.be/oiiYXG3IT6o?si=8LsFCHj9wu3seUcF', image: './avatars/yxn1.png' },
       { id: 'yu-xinnuo-proj2', title: 'EMOGym', link: 'https://youtu.be/rcXQpqeEiEU?si=Q69ldF2Yz03m4kY4', image: './avatars/yxn2.png' },
       { id: 'yu-xinnuo-proj3', title: 'Information juice machine', link: 'https://youtu.be/RR7CgKYgqWY?si=NJLEopKraGCzqq0y', image: './avatars/yxn3.png' }
-    ]
+    ],
+    schedule: {
+      mon: '10:00 – 17:00',
+      tue: '10:00 – 17:00',
+      wed: '10:00 – 17:00',
+      thu: '10:00 – 17:00',
+      fri: '10:00 – 17:00',
+      sat: '',
+      sun: ''
+    }
   },
   {
     id: 'sun-xiaohu',
@@ -69,11 +92,12 @@ export const students = [
       { period: '2024-', school: 'Hanyang University', degree: '' }
     ],
     researchWork: [],
-    projects: [
-      { id: 'sun-xiaohu-proj1', title: 'Project 1', link: '', image: '' },
-      { id: 'sun-xiaohu-proj2', title: 'Project 2', link: '', image: '' },
-      { id: 'sun-xiaohu-proj3', title: 'Project 3', link: '', image: '' }
-    ]
+    // projects: [
+    //   { id: 'sun-xiaohu-proj1', title: 'Project 1', link: '', image: '' },
+    //   { id: 'sun-xiaohu-proj2', title: 'Project 2', link: '', image: '' },
+    //   { id: 'sun-xiaohu-proj3', title: 'Project 3', link: '', image: '' }
+    // ]
+    schedule: emptySchedule()
   },
   {
     id: 'wang-wenhao',
@@ -94,11 +118,12 @@ export const students = [
       { date: '2025.06', title: 'Publication |', desc: "왕문호, 노승관.(2025).혁신 확산 이론에 기반한 생성형 AI의 3D 애니메이션 제작 과정에서 활용 분석.한국디자인문화학회지,31(2),419-433." },
       { date: '2025.12', title: 'Publication |', desc: "왕문호, 노승관.(2025).매체 생태학 관점에서 생성형 AI의 3D 애니메이션에 대한 구조적 재구성 분석.한국디자인문화학회지,31(4),505-519." }
     ],
-    projects: [
-      { id: 'wang-wenhao-proj1', title: 'Project 1', link: '', image: '' },
-      { id: 'wang-wenhao-proj2', title: 'Project 2', link: '', image: '' },
-      { id: 'wang-wenhao-proj3', title: 'Project 3', link: '', image: '' }
-    ]
+    // projects: [
+    //   { id: 'wang-wenhao-proj1', title: 'Project 1', link: '', image: '' },
+    //   { id: 'wang-wenhao-proj2', title: 'Project 2', link: '', image: '' },
+    //   { id: 'wang-wenhao-proj3', title: 'Project 3', link: '', image: '' }
+    // ]
+    schedule: emptySchedule()
   },
   {
     id: 'li-siying',
@@ -106,7 +131,7 @@ export const students = [
     nameKo: '이사영｜석사',
     email: 'siyingli999@gmail.com',
     website: '',
-    interests: 'AI 영상 미학, 애니메이션 디자인',
+    interests: 'AI video aesthetics / Animation design',
     avatar: './avatars/lisiying.jpg',
     bio: 'Researcher in HCI, creative computing and data visualization. Focus on algorithm education applications and AI-based systems for emotional development.',
     role: 'M.S.',
@@ -114,15 +139,16 @@ export const students = [
       { period: '2019-2024', school: 'Hanyang University', degree: 'Bachelor of Interactive Video Design' },
       { period: '2024-2026', school: 'Hanyang University', degree: 'Master of Interactive Video Design' },
     ],
-    researchWork: [
-      { date: '2025.10', title: 'Publication |', desc: '' },
-      { date: '2026. 05', title: 'Publication |', desc: "" }
-    ],
+    // researchWork: [
+    //   { date: '2025.10', title: 'Publication |', desc: '' },
+    //   { date: '2026. 05', title: 'Publication |', desc: "" }
+    // ],
     projects: [
-      { id: 'li-siying-proj1', title: 'Project 1', link: 'https://drive.google.com/drive/folders/1MTtotHABO_bpxcLwSG2Rjq2kHSUQ-FKW?usp=drive_link', image: '' },
-      { id: 'li-siying-proj2', title: 'Project 2', link: 'https://drive.google.com/drive/folders/1y-NFKIWTBiAkf2-y3FiQm3YxOSpUzvxw?usp=drive_link', image: '' },
-      { id: 'li-siying-proj3', title: 'Project 3', link: 'https://drive.google.com/drive/folders/1y-NFKIWTBiAkf2-y3FiQm3YxOSpUzvxw?usp=drive_link', image: '' }
-    ]
+      { id: 'li-siying-proj1', title: '동물계 핵인싸 카피바라의 하루', link: 'https://youtu.be/ZZFiTasvzT4', image: '' },
+      { id: 'li-siying-proj2', title: '올리브영 비건 파티- Oliveyoung Vegan Beauty Party', link: 'https://youtu.be/U-_WlfxrdcU', image: '' },
+     // { id: 'li-siying-proj3', title: 'Project 3', link: 'https://drive.google.com/drive/folders/1y-NFKIWTBiAkf2-y3FiQm3YxOSpUzvxw?usp=drive_link', image: '' }
+    ],
+    schedule: emptySchedule()
   },
   {
     id: 'fu-yulong',
@@ -130,7 +156,7 @@ export const students = [
     nameKo: '박위롱｜석사',
     email: 'f1013014336@gmail.com',
     website: '',
-    interests: '영화의 캐릭터 형성 및 서사 전략 연구',
+    interests: 'Character formation and narrative strategy in film',
     avatar: './avatars/yulong.jpg',
     bio: 'Researcher in HCI, creative computing and data visualization. Focus on algorithm education applications and AI-based systems for emotional development.',
     role: 'M.S.',
@@ -145,7 +171,8 @@ export const students = [
       { id: 'fu-yulong-proj1', title: 'I.E.E', link: 'https://youtu.be/oiiYXG3IT6o?si=8LsFCHj9wu3seUcF', image: '' },
       { id: 'fu-yulong-proj2', title: 'EMOGym', link: 'https://youtu.be/rcXQpqeEiEU?si=Q69ldF2Yz03m4kY4', image: '' },
       { id: 'fu-yulong-proj3', title: 'Information juice machine', link: 'https://youtu.be/RR7CgKYgqWY?si=NJLEopKraGCzqq0y', image: '' }
-    ]
+    ],
+    schedule: emptySchedule()
   },
   {
     id: 'zhan-shunian',
@@ -153,7 +180,7 @@ export const students = [
     nameKo: '잔수연｜석박통학',
     email: 'shunianzhan@gmail.com',
     website: '',
-    interests: 'AI생성, 애니메이션의 캐릭터 디자인',
+    interests: 'AI generation / Character design in animation',
     avatar: './avatars/zhanshunian.jpg',
     bio: 'Researcher in HCI, creative computing and data visualization. Focus on algorithm education applications and AI-based systems for emotional development.',
     role: 'Ph.D. Candidate',
@@ -166,10 +193,9 @@ export const students = [
 
     ],
     projects: [
-      { id: 'zhan-shunian-proj1', title: 'Portfolio', link: 'https://youtu.be/g8jr3g3AJDA?feature=shared', image: './avatars/zsn1.png' },
-      { id: 'zhan-shunian-proj2', title: 'Project 2', link: '', image: '' },
-      { id: 'zhan-shunian-proj3', title: 'Project 3', link: '', image: '' }
-    ]
+      { id: 'zhan-shunian-proj1', title: 'Portfolio', link: 'https://youtu.be/g8jr3g3AJDA?feature=shared', image: './avatars/zsn1.png' }
+    ],
+    schedule: emptySchedule()
   },
   {
     id: 'li-jintong',
@@ -177,7 +203,7 @@ export const students = [
     nameKo: '이근동｜박사',
     email: 'lijintong@hanyang.ac.kr',
     website: '',
-    interests: '애니메이션 디자인, 게임 디자인, AI 생성 애니메이션',
+    interests: 'Animation design / Game design / AI-generated animation',
     avatar: './avatars/lijintong.jpg',
     bio: 'Researcher in HCI, creative computing and data visualization. Focus on algorithm education applications and AI-based systems for emotional development.',
     role: 'Ph.D.',
@@ -190,10 +216,11 @@ export const students = [
       { date: '2024.06', title: 'Publication', desc: " An Analysis of the Ideographic Function of Color Language in 2D Animation: A Case Study of The Pool" }
     ],
     projects: [
-      { id: 'li-jintong-proj1', title: 'THE DESERT SECRET', link: 'https://www.dropbox.com/scl/fi/8levs40n49eysmk1iqg12/THE-DESERT-SECRET.mp4?rlkey=fp16s5ogdvp3c3yf6wcs83igk&st=1m0gnymh&dl=0', image: './avatars/ljt1.png' },
-      { id: 'li-jintong-proj2', title: 'THE SEA', link: 'https://www.dropbox.com/scl/fi/7t7t3qt5p1et3uuxgkuen/THE-SEA.mp4?rlkey=0o7no2ihcp9unajv0k12zywr6&st=21uf5548&dl=0', image: './avatars/ljt2.png' },
-      { id: 'li-jintong-proj3', title: 'JEEP', link: 'https://www.dropbox.com/scl/fi/g17diyqo9v1byedir9u31/JEEP.mp4?rlkey=z576azw3ww60obbray8cq6vvu&st=s8u081rb&dl=0', image: './avatars/ljt3.png' }
-    ]
+      { id: 'li-jintong-proj1', title: 'THE DESERT SECRET', link: 'https://www.youtube.com/watch?v=EFMsKjfEXjg', image: '' },
+      { id: 'li-jintong-proj2', title: 'THE SEA', link: 'https://www.youtube.com/watch?v=KNdo8s86aiY', image: '' },
+      { id: 'li-jintong-proj3', title: 'JEEP', link: 'https://www.youtube.com/watch?v=f5S9rP8NIkg', image: '' }
+    ],
+    schedule: emptySchedule()
   },
   {
     id: 'ji-wanting',
@@ -202,7 +229,7 @@ export const students = [
     email: '',
     website: '',
     interests: 'HCI / Animation Design / 3D Modeling',
-    avatar: '',
+    avatar: './avatars/jiwanting.jpg',
     bio: 'Researcher in HCI, creative computing and data visualization. Focus on algorithm education applications and AI-based systems for emotional development.',
     role: 'M.S.',
     education: [
@@ -214,10 +241,11 @@ export const students = [
       { date: '2022.06', title: 'undergraduate graduation project', desc: 'Undergraduate graduation project was awarded the Best Creative Award by the faculty.' }
     ],
     projects: [
-      { id: 'ji-wanting-proj1', title: 'Project 1', link: '', image: '' },
-      { id: 'ji-wanting-proj2', title: 'Project 2', link: '', image: '' },
-      { id: 'ji-wanting-proj3', title: 'Project 3', link: '', image: '' }
-    ]
+      { id: 'ji-wanting-proj1', title: '시간 역전의 여정', link: 'https://www.youtube.com/watch?v=BjW0hp4BoYw', image: '' },
+      { id: 'ji-wanting-proj2', title: 'Bearly Home', link: 'https://www.youtube.com/watch?v=GCAjt6jnt4k', image: '' },
+      { id: 'ji-wanting-proj3', title: 'Suitcase Advertising Animation', link: 'https://www.youtube.com/watch?v=SzdRPRMCwGQ', image: '' }
+    ],
+    schedule: emptySchedule()
   },
   {
     id: 'zhang-taibao',
@@ -243,6 +271,7 @@ export const students = [
     //   { id: 'zhang-taibao-proj2', title: 'Project 2', link: '', image: '' },
     //   { id: 'zhang-taibao-proj3', title: 'Project 3', link: '', image: '' }
     // ]
+    schedule: emptySchedule()
   }
 ]
 
@@ -268,7 +297,67 @@ export const graduatedStudents = [
       { date: '2025', title: 'A Study on the Influence of Stylized Image Generation Capabilities of AI on Image Generation Appropriateness for Creative Design', desc: '' },
       { date: '2026', title: 'A Study on Enhancing User Satisfaction with Image-Generating AI Design', desc: '' }
     ],
-    projects: []
+    projects: [],
+    schedule: emptySchedule()
+  },
+  {
+    id: 'xing-ying',
+    nameEn: 'XING YING',
+    nameKo: '형영｜석사',
+    email: '397069768ying@gmail.com',
+    website: '',
+    interests: 'Video Editing / Special Effects Production / AI-assisted creative design',
+    avatar: './avatars/xingying.jpg',
+    bio: '',
+    role: 'MF',
+    education: [
+      { period: '2015-2019', school: 'Nanjing Media University', degree: 'Bachelor of Arts' },
+      { period: '2021-2024', school: 'Hanyang University', degree: 'PhD Design' }
+    ],
+    researchWork: [
+      { date: '2022', title: 'A Study on Fan Favorability and Loyalty in Virtual Character Design in Advertising Marketing', desc: '' },
+      { date: '2022', title: "Analysis of the development strategy of the virtual idol industry according to the media convergence trend — focusing on Luo Tianyi", desc: '' },
+      { date: '2023', title: 'Experiential marketing analysis of digital signage advertising', desc: '' }
+    ],
+    projects: [],
+    schedule: emptySchedule()
+  },
+  {
+    id: 'zhang-yumo',
+    nameEn: 'ZHANG YUMO',
+    nameKo: '장우목｜박사',
+    email: 'pipimo123@gmail.com',
+    website: '',
+    interests:
+      'Virtual reality animation design / Multimedia Design/ AI-assisted creative design',
+    avatar: './avatars/zhangyumo.jpg',
+    bio: '',
+    role: 'Ph.D.',
+    education: [
+      { period: '2013-2017', school: 'Beijing Institute of Graphic Communication', degree: 'Bachelor of Photography' },
+      { period: '2017-2019', school: 'Beijing Institute of Graphic Communication', degree: 'Master of Art Design' },
+      { period: '2021-2025', school: 'Hanyang University', degree: 'PhD of Design' },
+      { period: '2025-', school: 'Weihai Vocational College', degree: 'College of Culture and Tourism' }
+    ],
+    researchWork: [
+      {
+        date: '2024',
+        title: 'A Study on the Interactive Method to Improve the Immersion of VR Animation Focused on <Bonfire>',
+        desc: ''
+      },
+      {
+        date: '2025',
+        title: 'A Study on the Influence of Emotional Design on Audience in VR Animation Focusing on <Baba Yaga>',
+        desc: ''
+      },
+      {
+        date: '2025',
+        title: 'A Study on Interactive Narrative Influencing the Immersiveness of VR Animation',
+        desc: ''
+      }
+    ],
+    projects: [],
+    schedule: emptySchedule()
   }
 ]
 
