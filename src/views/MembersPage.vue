@@ -57,10 +57,22 @@ import { professor, students, graduatedStudents } from '../data/members.js'
 
 const { t } = useI18n()
 
+const newlyAddedStudentIds = new Set([
+  'qu-chengyuan',
+  'zhang-bin',
+  'wu-chenghao',
+  'ji-xiaomeng',
+  'kim-seungho'
+])
+
 // 博士、硕博连读在前，硕士在后
 const sortedStudents = computed(() => {
   const isPhdOrCombined = s => s.role?.includes('Ph.D')
   return [...students].sort((a, b) => {
+    const aIsNew = newlyAddedStudentIds.has(a.id)
+    const bIsNew = newlyAddedStudentIds.has(b.id)
+    if (aIsNew !== bIsNew) return aIsNew ? 1 : -1
+
     const aFirst = isPhdOrCombined(a) ? 0 : 1
     const bFirst = isPhdOrCombined(b) ? 0 : 1
     return aFirst - bFirst

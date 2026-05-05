@@ -86,7 +86,7 @@ export const students = [
     interests: 'Game Design / Interactive Storytelling / 3D Animation',
     avatar: './avatars/sunxiaohu.jpg',
     bio: 'Researcher in HCI, creative computing and data visualization. Focus on algorithm education applications and AI-based systems for emotional development.',
-    role: 'M.S.–Ph.D. Candidate',
+    role: 'M.S.',
     education: [
       { period: '2019-2024', school: 'Hanyang University', degree: 'Bachelor of Interactive Video Design' },
       { period: '2024-', school: 'Hanyang University', degree: '' }
@@ -206,7 +206,7 @@ export const students = [
     interests: 'Animation design / Game design / AI-generated animation',
     avatar: './avatars/lijintong.jpg',
     bio: 'Researcher in HCI, creative computing and data visualization. Focus on algorithm education applications and AI-based systems for emotional development.',
-    role: 'Ph.D.',
+    role: 'M.S.',
     education: [
       { period: '2019-2023', school: 'Hubei Institute of Fine Arts', degree: 'Bachelor of Fine Arts' },
       { period: '2023-2024', school: 'Hanseo University', degree: 'Master of Animation' },
@@ -271,6 +271,137 @@ export const students = [
     //   { id: 'zhang-taibao-proj2', title: 'Project 2', link: '', image: '' },
     //   { id: 'zhang-taibao-proj3', title: 'Project 3', link: '', image: '' }
     // ]
+    schedule: emptySchedule()
+  },
+  {
+    id: 'qu-chengyuan',
+    nameEn: 'CHENGYUAN QU',
+    nameKo: '취청위안｜석사',
+    email: 'quchengyuan86@gmail.com',
+    website: '',
+    interests: 'Advertising Production / Film Production / New Media',
+    avatar: './avatars/quchengyuan.jpg',
+    bio: '',
+    role: 'M.S.',
+    education: [
+      { period: '2022-2025', school: 'Chengdu College of Arts and Sciences', degree: 'B.A. in Broadcasting & TV Directing' },
+      { period: '2025-', school: 'Hanyang University', degree: '' }
+    ],
+    researchWork: [
+      {
+        date: '2023-2025',
+        title: 'Video Content & AI Imaging Research',
+        desc: 'Short-form video planning, shooting, and editing; AI-assisted visual content creation; focus on new media platforms and audience behavior.'
+      }
+    ],
+    projects: [
+      { id: 'qu-chengyuan-proj1', title: 'Project 1', link: 'https://youtu.be/Vq8otb8lnk4', image: '' },
+      { id: 'qu-chengyuan-proj2', title: 'Project 2', link: 'https://youtu.be/oVwTWjzcEz8', image: '' },
+      { id: 'qu-chengyuan-proj3', title: 'Project 3', link: 'https://youtu.be/WVAzkkAaHyk', image: '' }
+    ],
+    schedule: emptySchedule()
+  },
+  {
+    id: 'zhang-bin',
+    nameEn: 'ZHANG BIN',
+    nameKo: '장빈｜박사',
+    email: 'fl7548085@gmail.com',
+    website: '',
+    interests: 'Animation / 3D Modeling / Generative AI',
+    avatar: './avatars/zhangbin.jpg',
+    bio: '',
+    role: 'Ph.D. Student',
+    education: [
+      { period: '2013-2017', school: 'Jilin Animation Institute', degree: 'Bachelor of Arts in Animation' },
+      { period: '2022-2024', school: 'Sangmyung University', degree: 'Master of Arts in Animation' },
+      { period: '2025-', school: 'Hanyang University', degree: '' }
+    ],
+    researchWork: [
+      {
+        date: '2023.12',
+        title: 'Solo Exhibition, Chenzhou Museum (Hunan, China)',
+        desc: "Visual Expression of Zhuangzi's Philosophy through 3D Ink Art"
+      }
+    ],
+    projects: [
+      { id: 'zhang-bin-proj1', title: 'Project 1', link: 'https://www.youtube.com/watch?v=bo66zn3tmAg', image: '' },
+      { id: 'zhang-bin-proj2', title: 'Project 2', link: 'https://www.youtube.com/watch?v=T_pZ2O1dl2c', image: '' },
+      { id: 'zhang-bin-proj3', title: 'Project 3', link: 'https://www.youtube.com/watch?v=MHjiRk6Gh1E', image: '' }
+    ],
+    schedule: emptySchedule()
+  },
+  {
+    id: 'wu-chenghao',
+    nameEn: 'WU CHENGHAO',
+    nameKo: '오성호｜박사',
+    email: 'wchsgpg@gmail.com',
+    website: '',
+    interests: 'Human-Computer Interaction (HCI) / Game Design / Digital Media Art Design',
+    avatar: './avatars/WU CHENGHAO 오성호｜박사 Ph.D..jpg',
+    bio: '',
+    role: 'Ph.D.',
+    education: [
+      { period: '2011-2015', school: 'Nanchang University', degree: 'B.A. in Animation' },
+      { period: '2015-2018', school: 'Nanchang University', degree: 'M.A. in Digital Media Art' },
+      { period: '2026-', school: 'Hanyang University', degree: '' }
+    ],
+    researchWork: [
+      { date: '2019.06', title: 'Visual Guidance Innovation of the Bada Shanren Memorial Hall Based on VR/AR Realistic Interaction Design', desc: 'Packaging Engineering' },
+      { date: '2021.02', title: 'Application of Motion Capture Technology in Interactive Model Control', desc: 'Electronic Technology & Software Engineering' },
+      { date: '2021.02', title: 'Application of Multimodal Virtual Combat Teaching Design in Firefighting Training', desc: 'China-Arab States Science and Technology Forum' },
+      { date: '2021.04', title: 'An Analysis of the Application of Virtual Reality Technology in Practical Training Courses for Art and Design', desc: 'Fortune Time' },
+      { date: '2022.07', title: 'Next-Generation Character Figure Modeling', desc: 'Horizontal Research Project' },
+      { date: '2023.05', title: 'VR Training Development Project for Grassroots Depots and Stations', desc: 'Horizontal Research Project' },
+      { date: '2024.03', title: 'Research on the Application of Multimodal Haptic Technology in the Interaction Design of Virtual Characters', desc: 'Vertical Research Project, Wenzhou Municipal Science and Technology Bureau' },
+      { date: '2024.09', title: 'Research on the Application of Multimodal Haptic Technology in the Interaction Design of Virtual Characters', desc: 'Scientific Journal of Intelligent Systems Research' },
+      { date: '2025.04', title: 'Design and Application of a Haptic Feedback System for Virtual Characters Based on Multimodal Perception', desc: 'Contemporary Education Frontiers' },
+      { date: '2025.05', title: 'Research on Emergency Drills for Gas Station Accidents Based on Virtual Simulation', desc: 'Lecture Notes in Education, Arts, Management and Social Science' }
+    ],
+    projects: [
+      { id: 'wu-chenghao-proj1', title: 'Zhang Yide Figurine Production', link: 'https://youtu.be/bUTiYjqUdKw', image: '' }
+    ],
+    schedule: emptySchedule()
+  },
+  {
+    id: 'ji-xiaomeng',
+    nameEn: 'JI XIAOMENG',
+    nameKo: '기소몽｜석사',
+    email: 'dddameinvvv@163.com',
+    website: '',
+    interests: 'Digital Media Art / Visual Design / Interactive Media',
+    avatar: './avatars/jixiaomeng.jpg',
+    bio: '',
+    role: 'M.S.',
+    education: [
+      { period: '2021-2025', school: 'Wuhan Textile University', degree: 'Bachelor of Arts in Digital Media Art (Sino-British joint program, co-supervised by Birmingham City University, UK)' },
+      { period: '2025-', school: 'Hanyang University', degree: '' }
+    ],
+    researchWork: [
+      { date: '2022', title: 'Immortal selected for the 13th Annual Exhibition of Chinese University Students’ Artworks', desc: '' },
+      { date: '2024', title: 'Team short film won Best Narrative Short Film Award at the Innovation Film Festival', desc: 'Served as cinematographer.' }
+    ],
+    projects: [
+      { id: 'ji-xiaomeng-proj1', title: 'Project 1', link: 'https://youtu.be/3w8R9bwNqpA?feature=shared', image: '' },
+      { id: 'ji-xiaomeng-proj2', title: 'Project 2', link: 'https://youtu.be/IlQ4ejDfipU?feature=shared', image: '' }
+    ],
+    schedule: emptySchedule()
+  },
+  {
+    id: 'kim-seungho',
+    nameEn: 'KIM SEUNGHO',
+    nameKo: '김승호｜석사',
+    email: 'seunghokim@hanyang.ac.kr',
+    website: '',
+    interests: 'Game UX / Emotional Interaction',
+    avatar: '',
+    bio: '',
+    role: 'M.S.',
+    education: [
+      { period: '2019-2023', school: 'Hongik University', degree: 'Bachelor of Design' },
+      { period: '2025-', school: 'Hanyang University', degree: '' }
+    ],
+    researchWork: [],
+    projects: [],
     schedule: emptySchedule()
   }
 ]
