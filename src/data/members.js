@@ -278,7 +278,7 @@ export const students = [
     nameEn: 'CHENGYUAN QU',
     nameKo: '취청위안｜석사',
     email: 'quchengyuan86@gmail.com',
-    website: '',
+    website: 'https://quchengyuan.github.io/gerenwangye/',
     interests: 'Advertising Production / Film Production / New Media',
     avatar: './avatars/quchengyuan.jpg',
     bio: '',
@@ -335,9 +335,9 @@ export const students = [
     nameEn: 'WU CHENGHAO',
     nameKo: '오성호｜박사',
     email: 'wchsgpg@gmail.com',
-    website: '',
+    website: 'https://wchsgpg.github.io/personal-site/',
     interests: 'Human-Computer Interaction (HCI) / Game Design / Digital Media Art Design',
-    avatar: './avatars/WU CHENGHAO 오성호｜박사 Ph.D..jpg',
+    avatar: './avatars/wuchenghao.jpg',
     bio: '',
     role: 'Ph.D.',
     education: [
@@ -387,20 +387,81 @@ export const students = [
     schedule: emptySchedule()
   },
   {
-    id: 'kim-seungho',
-    nameEn: 'KIM SEUNGHO',
-    nameKo: '김승호｜석사',
-    email: 'seunghokim@hanyang.ac.kr',
-    website: '',
-    interests: 'Game UX / Emotional Interaction',
-    avatar: '',
+    id: 'zhang-yurou',
+    nameEn: 'ZHANG YUROU',
+    nameKo: '장우유｜박사',
+    email: 'rourou200210@gmail.com',
+    website: 'https://rourou200210-ship-it.github.io/personal-web-sites/',
+    interests: 'Animation Design / AI-generated Animation / Cross-media Practice',
+    avatar: './avatars/zhangyurou.jpg',
     bio: '',
-    role: 'M.S.',
+    role: 'Ph.D.',
     education: [
-      { period: '2019-2023', school: 'Hongik University', degree: 'Bachelor of Design' },
-      { period: '2025-', school: 'Hanyang University', degree: '' }
+      { period: '2020-2025', school: 'Hubei Institute of Fine Arts', degree: 'Bachelor of Fine Arts' },
+      { period: '2024-2025', school: 'Hanseo University', degree: 'Master of Animation' },
+      { period: '2026-', school: 'Hanyang University', degree: '' }
     ],
-    researchWork: [],
+    researchWork: [
+      {
+        date: '2025.06',
+        title: 'A Brief Analysis of the Metaphorical Expression of Light and Shadow in the Relationship of 2D Animation Characters: Taking "Shadow" as an Example',
+        desc: ''
+      }
+    ],
+    projects: [],
+    schedule: emptySchedule()
+  },
+  {
+    id: 'zhou-yutong',
+    nameEn: 'ZHOU YUTONG',
+    nameKo: '',
+    email: 'm2yutongzhou@outlook.com',
+    website: 'https://quchengyuan.github.io/zhouyutong/',
+    interests: 'Interaction Design / 3D Modeling',
+    avatar: './avatars/zhouyutong.jpg',
+    bio: '',
+    role: 'Master',
+    education: [
+      { period: '2019-2023', school: 'Jilin Animation Institute', degree: 'Bachelor of Art Design' },
+      { period: '2026.03-', school: 'Hanyang University', degree: "Master's Candidate" }
+    ],
+    researchWork: [
+      {
+        date: '2022',
+        title: 'Function Design of Exhibition Platform Based on Computer and Big Data Line',
+        desc: 'EI-indexed Conference Paper (IC 2022, LNEE Vol. 935), 2nd Author.'
+      }
+    ],
+    projects: [],
+    schedule: emptySchedule()
+  },
+  {
+    id: 'wei-wenshu',
+    nameEn: 'WEI WENSHU',
+    nameKo: '웨문서｜박사',
+    email: 'weiwenshushu@naver.com',
+    website: 'https://weiwenshu1049940466-ctrl.github.io/Personal-Website/',
+    interests: 'Concept Design / AI-generated',
+    avatar: './avatars/weiwenshu.jpg',
+    bio: '',
+    role: 'Ph.D.',
+    education: [
+      { period: '2013-2018', school: 'Hubei Institute of Fine Arts', degree: 'Bachelor of Fine Arts' },
+      { period: '2024-2026', school: 'SeoKyeong University', degree: 'Art Studies Film and Moving Image' },
+      { period: '2026-', school: 'Hanyang University', degree: '' }
+    ],
+    researchWork: [
+      {
+        date: '2026.02',
+        title: '생성형 AI 미디어 하에서 콘셉트 아트 창작 패러다임의 재구성 연구 - 마노비치 이론을 중심으로',
+        desc: ''
+      },
+      {
+        date: '2025.12',
+        title: '影游融合视角下互动电影游戏的出现和方向',
+        desc: ''
+      }
+    ],
     projects: [],
     schedule: emptySchedule()
   }

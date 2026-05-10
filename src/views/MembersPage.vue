@@ -62,7 +62,9 @@ const newlyAddedStudentIds = new Set([
   'zhang-bin',
   'wu-chenghao',
   'ji-xiaomeng',
-  'kim-seungho'
+  'zhang-yurou',
+  'zhou-yutong',
+  'wei-wenshu'
 ])
 
 // 博士、硕博连读在前，硕士在后
