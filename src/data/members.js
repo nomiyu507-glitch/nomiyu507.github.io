@@ -105,7 +105,7 @@ export const students = [
     nameEn: 'LI SIYING',
     nameKo: '이사영｜석사',
     email: 'siyingli999@gmail.com',
-    website: '',
+    website: 'https://siyingli.framer.media/',
     interests: 'AI video aesthetics / Animation design',
     avatar: './avatars/lisiying.jpg',
     bio: 'Researcher in HCI, creative computing and data visualization. Focus on algorithm education applications and AI-based systems for emotional development.',
