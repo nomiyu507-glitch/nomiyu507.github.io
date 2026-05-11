@@ -171,7 +171,7 @@ export const students = [
     nameEn: 'LI JINTONG',
     nameKo: '이근동｜박사',
     email: 'lijintong@hanyang.ac.kr',
-    website: '',
+    website: 'https://jintong-art.github.io/portfolio/',
     interests: 'Animation design / Game design / AI-generated animation',
     avatar: './avatars/lijintong.jpg',
     bio: 'Researcher in HCI, creative computing and data visualization. Focus on algorithm education applications and AI-based systems for emotional development.',
