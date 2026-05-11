@@ -2,19 +2,6 @@
  * 实验室成员数据 - 成员页与个人详情页共用
  */
 
-/** 每周时间表：mon–sun 为当日可用时间，空字符串表示未填写 */
-function emptySchedule() {
-  return {
-    mon: '',
-    tue: '',
-    wed: '',
-    thu: '',
-    fri: '',
-    sat: '',
-    sun: ''
-  }
-}
-
 export const professor = {
   id: 'professor',
   nameEn: 'Professor Name',
@@ -38,8 +25,7 @@ export const professor = {
     { id: 'professor-proj1', title: 'Project 1', link: '', image: '' },
     { id: 'professor-proj2', title: 'Project 2', link: '', image: '' },
     { id: 'professor-proj3', title: 'Project 3', link: '', image: '' }
-  ],
-  schedule: emptySchedule()
+  ]
 }
 
 export const students = [
@@ -66,23 +52,14 @@ export const students = [
       { id: 'yu-xinnuo-proj1', title: 'I.E.E', link: 'https://youtu.be/oiiYXG3IT6o?si=8LsFCHj9wu3seUcF', image: './avatars/yxn1.png' },
       { id: 'yu-xinnuo-proj2', title: 'EMOGym', link: 'https://youtu.be/rcXQpqeEiEU?si=Q69ldF2Yz03m4kY4', image: './avatars/yxn2.png' },
       { id: 'yu-xinnuo-proj3', title: 'Information juice machine', link: 'https://youtu.be/RR7CgKYgqWY?si=NJLEopKraGCzqq0y', image: './avatars/yxn3.png' }
-    ],
-    schedule: {
-      mon: '10:00 – 17:00',
-      tue: '10:00 – 17:00',
-      wed: '10:00 – 17:00',
-      thu: '10:00 – 17:00',
-      fri: '10:00 – 17:00',
-      sat: '',
-      sun: ''
-    }
+    ]
   },
   {
     id: 'sun-xiaohu',
     nameEn: 'SUN XIAOHU',
     nameKo: '손소호｜석박통학',
     email: 'xh2024162898@hanyang.ac.kr',
-    website: '',
+    website: 'https://csdliu.github.io/mypage/',
     interests: 'Game Design / Interactive Storytelling / 3D Animation',
     avatar: './avatars/sunxiaohu.jpg',
     bio: 'Researcher in HCI, creative computing and data visualization. Focus on algorithm education applications and AI-based systems for emotional development.',
@@ -97,7 +74,6 @@ export const students = [
     //   { id: 'sun-xiaohu-proj2', title: 'Project 2', link: '', image: '' },
     //   { id: 'sun-xiaohu-proj3', title: 'Project 3', link: '', image: '' }
     // ]
-    schedule: emptySchedule()
   },
   {
     id: 'wang-wenhao',
@@ -123,7 +99,6 @@ export const students = [
     //   { id: 'wang-wenhao-proj2', title: 'Project 2', link: '', image: '' },
     //   { id: 'wang-wenhao-proj3', title: 'Project 3', link: '', image: '' }
     // ]
-    schedule: emptySchedule()
   },
   {
     id: 'li-siying',
@@ -147,9 +122,7 @@ export const students = [
       { id: 'li-siying-proj1', title: '동물계 핵인싸 카피바라의 하루', link: 'https://youtu.be/ZZFiTasvzT4', image: '' },
       { id: 'li-siying-proj2', title: '올리브영 비건 파티- Oliveyoung Vegan Beauty Party', link: 'https://youtu.be/U-_WlfxrdcU', image: '' },
      // { id: 'li-siying-proj3', title: 'Project 3', link: 'https://drive.google.com/drive/folders/1y-NFKIWTBiAkf2-y3FiQm3YxOSpUzvxw?usp=drive_link', image: '' }
-    ],
-    schedule: emptySchedule()
-  },
+    ]  },
   {
     id: 'fu-yulong',
     nameEn: 'FU YULONG',
@@ -171,9 +144,7 @@ export const students = [
       { id: 'fu-yulong-proj1', title: 'I.E.E', link: 'https://youtu.be/oiiYXG3IT6o?si=8LsFCHj9wu3seUcF', image: '' },
       { id: 'fu-yulong-proj2', title: 'EMOGym', link: 'https://youtu.be/rcXQpqeEiEU?si=Q69ldF2Yz03m4kY4', image: '' },
       { id: 'fu-yulong-proj3', title: 'Information juice machine', link: 'https://youtu.be/RR7CgKYgqWY?si=NJLEopKraGCzqq0y', image: '' }
-    ],
-    schedule: emptySchedule()
-  },
+    ]  },
   {
     id: 'zhan-shunian',
     nameEn: 'ZHAN SHUNIAN',
@@ -194,9 +165,7 @@ export const students = [
     ],
     projects: [
       { id: 'zhan-shunian-proj1', title: 'Portfolio', link: 'https://youtu.be/g8jr3g3AJDA?feature=shared', image: './avatars/zsn1.png' }
-    ],
-    schedule: emptySchedule()
-  },
+    ]  },
   {
     id: 'li-jintong',
     nameEn: 'LI JINTONG',
@@ -219,15 +188,13 @@ export const students = [
       { id: 'li-jintong-proj1', title: 'THE DESERT SECRET', link: 'https://www.youtube.com/watch?v=EFMsKjfEXjg', image: '' },
       { id: 'li-jintong-proj2', title: 'THE SEA', link: 'https://www.youtube.com/watch?v=KNdo8s86aiY', image: '' },
       { id: 'li-jintong-proj3', title: 'JEEP', link: 'https://www.youtube.com/watch?v=f5S9rP8NIkg', image: '' }
-    ],
-    schedule: emptySchedule()
-  },
+    ]  },
   {
     id: 'ji-wanting',
     nameEn: 'JI WANTING',
     nameKo: '지완정｜석사',
     email: '',
-    website: '',
+    website: 'https://portfolio-sandy-zeta-roixe5lcj2.vercel.app/#works',
     interests: 'HCI / Animation Design / 3D Modeling',
     avatar: './avatars/jiwanting.jpg',
     bio: 'Researcher in HCI, creative computing and data visualization. Focus on algorithm education applications and AI-based systems for emotional development.',
@@ -244,9 +211,7 @@ export const students = [
       { id: 'ji-wanting-proj1', title: '시간 역전의 여정', link: 'https://www.youtube.com/watch?v=BjW0hp4BoYw', image: '' },
       { id: 'ji-wanting-proj2', title: 'Bearly Home', link: 'https://www.youtube.com/watch?v=GCAjt6jnt4k', image: '' },
       { id: 'ji-wanting-proj3', title: 'Suitcase Advertising Animation', link: 'https://www.youtube.com/watch?v=SzdRPRMCwGQ', image: '' }
-    ],
-    schedule: emptySchedule()
-  },
+    ]  },
   {
     id: 'zhang-taibao',
     nameEn: 'ZHANG TAIBAO',
@@ -271,7 +236,6 @@ export const students = [
     //   { id: 'zhang-taibao-proj2', title: 'Project 2', link: '', image: '' },
     //   { id: 'zhang-taibao-proj3', title: 'Project 3', link: '', image: '' }
     // ]
-    schedule: emptySchedule()
   },
   {
     id: 'qu-chengyuan',
@@ -298,15 +262,13 @@ export const students = [
       { id: 'qu-chengyuan-proj1', title: 'Project 1', link: 'https://youtu.be/Vq8otb8lnk4', image: '' },
       { id: 'qu-chengyuan-proj2', title: 'Project 2', link: 'https://youtu.be/oVwTWjzcEz8', image: '' },
       { id: 'qu-chengyuan-proj3', title: 'Project 3', link: 'https://youtu.be/WVAzkkAaHyk', image: '' }
-    ],
-    schedule: emptySchedule()
-  },
+    ]  },
   {
     id: 'zhang-bin',
     nameEn: 'ZHANG BIN',
     nameKo: '장빈｜박사',
     email: 'fl7548085@gmail.com',
-    website: '',
+    website: 'https://fl7548085-spec.github.io/Personal-webpage/',
     interests: 'Animation / 3D Modeling / Generative AI',
     avatar: './avatars/zhangbin.jpg',
     bio: '',
@@ -327,9 +289,7 @@ export const students = [
       { id: 'zhang-bin-proj1', title: 'Project 1', link: 'https://www.youtube.com/watch?v=bo66zn3tmAg', image: '' },
       { id: 'zhang-bin-proj2', title: 'Project 2', link: 'https://www.youtube.com/watch?v=T_pZ2O1dl2c', image: '' },
       { id: 'zhang-bin-proj3', title: 'Project 3', link: 'https://www.youtube.com/watch?v=MHjiRk6Gh1E', image: '' }
-    ],
-    schedule: emptySchedule()
-  },
+    ]  },
   {
     id: 'wu-chenghao',
     nameEn: 'WU CHENGHAO',
@@ -359,9 +319,7 @@ export const students = [
     ],
     projects: [
       { id: 'wu-chenghao-proj1', title: 'Zhang Yide Figurine Production', link: 'https://youtu.be/bUTiYjqUdKw', image: '' }
-    ],
-    schedule: emptySchedule()
-  },
+    ]  },
   {
     id: 'ji-xiaomeng',
     nameEn: 'JI XIAOMENG',
@@ -383,9 +341,7 @@ export const students = [
     projects: [
       { id: 'ji-xiaomeng-proj1', title: 'Project 1', link: 'https://youtu.be/3w8R9bwNqpA?feature=shared', image: '' },
       { id: 'ji-xiaomeng-proj2', title: 'Project 2', link: 'https://youtu.be/IlQ4ejDfipU?feature=shared', image: '' }
-    ],
-    schedule: emptySchedule()
-  },
+    ]  },
   {
     id: 'zhang-yurou',
     nameEn: 'ZHANG YUROU',
@@ -408,9 +364,7 @@ export const students = [
         desc: ''
       }
     ],
-    projects: [],
-    schedule: emptySchedule()
-  },
+    projects: []  },
   {
     id: 'zhou-yutong',
     nameEn: 'ZHOU YUTONG',
@@ -432,9 +386,7 @@ export const students = [
         desc: 'EI-indexed Conference Paper (IC 2022, LNEE Vol. 935), 2nd Author.'
       }
     ],
-    projects: [],
-    schedule: emptySchedule()
-  },
+    projects: []  },
   {
     id: 'wei-wenshu',
     nameEn: 'WEI WENSHU',
@@ -462,9 +414,7 @@ export const students = [
         desc: ''
       }
     ],
-    projects: [],
-    schedule: emptySchedule()
-  }
+    projects: []  }
 ]
 
 /** 毕业学生 */
@@ -489,9 +439,7 @@ export const graduatedStudents = [
       { date: '2025', title: 'A Study on the Influence of Stylized Image Generation Capabilities of AI on Image Generation Appropriateness for Creative Design', desc: '' },
       { date: '2026', title: 'A Study on Enhancing User Satisfaction with Image-Generating AI Design', desc: '' }
     ],
-    projects: [],
-    schedule: emptySchedule()
-  },
+    projects: []  },
   {
     id: 'xing-ying',
     nameEn: 'XING YING',
@@ -511,9 +459,7 @@ export const graduatedStudents = [
       { date: '2022', title: "Analysis of the development strategy of the virtual idol industry according to the media convergence trend — focusing on Luo Tianyi", desc: '' },
       { date: '2023', title: 'Experiential marketing analysis of digital signage advertising', desc: '' }
     ],
-    projects: [],
-    schedule: emptySchedule()
-  },
+    projects: []  },
   {
     id: 'zhang-yumo',
     nameEn: 'ZHANG YUMO',
@@ -548,9 +494,7 @@ export const graduatedStudents = [
         desc: ''
       }
     ],
-    projects: [],
-    schedule: emptySchedule()
-  }
+    projects: []  }
 ]
 
 /** 根据 id 获取成员 */

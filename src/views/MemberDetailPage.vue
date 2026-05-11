@@ -14,46 +14,8 @@
           <span class="label">{{ t('memberDetail.researchArea') }}</span> {{ member.interests }}
         </div>
         <a v-if="member.email" :href="`mailto:${member.email}`" class="email">{{ member.email }}</a>
-        <button type="button" class="schedule-btn" @click="scheduleOpen = true">
-          {{ t('memberDetail.scheduleBtn') }}
-        </button>
       </div>
     </div>
-
-    <Teleport to="body">
-      <div
-        v-if="scheduleOpen"
-        class="schedule-modal-backdrop"
-        role="presentation"
-        @click.self="scheduleOpen = false"
-      >
-        <div
-          class="schedule-modal"
-          role="dialog"
-          aria-modal="true"
-          :aria-labelledby="'schedule-title'"
-        >
-          <div class="schedule-modal-header">
-            <h2 id="schedule-title" class="schedule-modal-title">{{ t('memberDetail.scheduleModalTitle') }}</h2>
-            <button type="button" class="schedule-modal-close" @click="scheduleOpen = false" :aria-label="t('memberDetail.close')">
-              ×
-            </button>
-          </div>
-          <div class="schedule-week">
-            <div
-              v-for="col in weekColumns"
-              :key="col.key"
-              class="schedule-day-col"
-              :class="{ 'is-today': col.isToday }"
-            >
-              <div class="schedule-day-label">{{ t(`memberDetail.weekDays.${col.key}`) }}</div>
-              <div class="schedule-day-date">{{ col.dateStr }}</div>
-              <div class="schedule-day-slot">{{ scheduleCell(member, col.key) }}</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </Teleport>
 
     <!-- Personal Website -->
     <div v-if="member.website" class="website-section">
@@ -142,68 +104,15 @@
 </template>
 
 <script setup>
-import { computed, ref, watch } from 'vue'
+import { computed } from 'vue'
 import { useRoute } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import { getMemberById } from '../data/members.js'
 import { getYouTubeEmbedUrl } from '../utils/youtube.js'
 
-const scheduleKeys = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun']
-
 const route = useRoute()
-const { t, locale } = useI18n()
+const { t } = useI18n()
 const member = computed(() => getMemberById(route.params.id))
-
-/** 本周一 00:00（周一至周日为一周） */
-function startOfWeekMonday(d) {
-  const x = new Date(d)
-  const day = x.getDay()
-  const diff = day === 0 ? -6 : 1 - day
-  x.setDate(x.getDate() + diff)
-  x.setHours(0, 0, 0, 0)
-  return x
-}
-
-const weekColumns = computed(() => {
-  const monday = startOfWeekMonday(new Date())
-  const loc = locale.value === 'ko' ? 'ko-KR' : 'en-US'
-  const fmt = new Intl.DateTimeFormat(loc, { month: 'numeric', day: 'numeric' })
-  const today = new Date()
-  today.setHours(0, 0, 0, 0)
-  return scheduleKeys.map((key, i) => {
-    const dt = new Date(monday)
-    dt.setDate(monday.getDate() + i)
-    const d0 = new Date(dt)
-    d0.setHours(0, 0, 0, 0)
-    return {
-      key,
-      dateStr: fmt.format(dt),
-      isToday: d0.getTime() === today.getTime()
-    }
-  })
-})
-const scheduleOpen = ref(false)
-
-let escHandler = null
-watch(scheduleOpen, open => {
-  if (typeof document === 'undefined') return
-  document.body.style.overflow = open ? 'hidden' : ''
-  if (open) {
-    escHandler = e => {
-      if (e.key === 'Escape') scheduleOpen.value = false
-    }
-    window.addEventListener('keydown', escHandler)
-  } else if (escHandler) {
-    window.removeEventListener('keydown', escHandler)
-    escHandler = null
-  }
-})
-
-function scheduleCell(m, key) {
-  const v = m?.schedule?.[key]
-  if (v == null || String(v).trim() === '') return t('memberDetail.scheduleEmpty')
-  return String(v).trim()
-}
 
 function embedUrl(proj) {
   return getYouTubeEmbedUrl(proj?.link || '')
@@ -316,134 +225,6 @@ const displayProjects = computed(() => member.value?.projects || [])
 .email:hover {
   color: #2563eb;
   text-decoration: underline;
-}
-
-.schedule-btn {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 8px 16px;
-  font-size: 0.875rem;
-  font-weight: 500;
-  color: #1f2937;
-  background: #f3f4f6;
-  border: 1px solid #e5e7eb;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background 0.2s, border-color 0.2s;
-}
-
-.schedule-btn:hover {
-  background: #e5e7eb;
-  border-color: #d1d5db;
-}
-
-.schedule-modal-backdrop {
-  position: fixed;
-  inset: 0;
-  z-index: 200;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 24px;
-  background: rgba(15, 23, 42, 0.45);
-}
-
-.schedule-modal {
-  width: 100%;
-  max-width: min(960px, calc(100vw - 32px));
-  max-height: min(90vh, 640px);
-  overflow: auto;
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-}
-
-.schedule-modal-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  padding: 16px 18px;
-  border-bottom: 1px solid #e5e7eb;
-}
-
-.schedule-modal-title {
-  margin: 0;
-  font-size: 1rem;
-  font-weight: 700;
-  color: #1f2937;
-}
-
-.schedule-modal-close {
-  flex-shrink: 0;
-  width: 36px;
-  height: 36px;
-  padding: 0;
-  font-size: 1.5rem;
-  line-height: 1;
-  color: #6b7280;
-  background: transparent;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background 0.2s, color 0.2s;
-}
-
-.schedule-modal-close:hover {
-  background: #f3f4f6;
-  color: #1f2937;
-}
-
-.schedule-week {
-  display: flex;
-  flex-direction: row;
-  align-items: stretch;
-  gap: 8px;
-  padding: 16px 14px 20px;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-}
-
-.schedule-day-col {
-  flex: 1 1 0;
-  min-width: 92px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 12px 8px;
-  border-radius: 10px;
-  border: 1px solid #e5e7eb;
-  background: #fafafa;
-  transition: border-color 0.2s, background 0.2s;
-}
-
-.schedule-day-col.is-today {
-  border-color: #2563eb;
-  background: #eff6ff;
-}
-
-.schedule-day-label {
-  font-size: 0.75rem;
-  font-weight: 700;
-  color: #6b7280;
-  letter-spacing: 0.04em;
-}
-
-.schedule-day-date {
-  font-size: 0.875rem;
-  font-weight: 600;
-  color: #1f2937;
-  margin: 6px 0 10px;
-  white-space: nowrap;
-}
-
-.schedule-day-slot {
-  font-size: 0.75rem;
-  color: #4b5563;
-  line-height: 1.4;
-  word-break: break-word;
-  width: 100%;
 }
 
 .website-section {

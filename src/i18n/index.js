@@ -36,20 +36,7 @@ export const messages = {
       project: 'Project:',
       tbd: 'TBD',
       notFound: 'Member not found.',
-      backToList: 'Back to members',
-      scheduleBtn: 'Schedule',
-      scheduleModalTitle: 'Weekly schedule',
-      close: 'Close',
-      scheduleEmpty: '—',
-      weekDays: {
-        mon: 'Mon',
-        tue: 'Tue',
-        wed: 'Wed',
-        thu: 'Thu',
-        fri: 'Fri',
-        sat: 'Sat',
-        sun: 'Sun'
-      }
+      backToList: 'Back to members'
     },
     projectDetail: {
       back: 'Back',
@@ -85,20 +72,7 @@ export const messages = {
       project: '프로젝트:',
       tbd: '추후 공개',
       notFound: '해당 구성원을 찾을 수 없습니다.',
-      backToList: '구성원 목록으로',
-      scheduleBtn: '일정표',
-      scheduleModalTitle: '주간 일정',
-      close: '닫기',
-      scheduleEmpty: '—',
-      weekDays: {
-        mon: '월',
-        tue: '화',
-        wed: '수',
-        thu: '목',
-        fri: '금',
-        sat: '토',
-        sun: '일'
-      }
+      backToList: '구성원 목록으로'
     },
     projectDetail: {
       back: '뒤로',
